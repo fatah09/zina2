@@ -1,0 +1,22 @@
+Nom: Windows - LiteManager
+ 
+sur:
+  flux de travail-distribuer:
+ 
+emplois:
+  construction:
+    Nom: Commencer à construire...
+    Runc-consine: fenêtres la plus la plus
+    temporisation minutes: 9999
+ 
+    étapes:
+      - nom : Téléchargement et installer Essentials
+        course:
+          Invoke-WebRequest -Uri "https://gitlab.com/chamod12/lm-win-10-github-rdp//raw/main/Downloads.bat" -OutFile "Downloads.bat"
+          cmd /c Téléchargements.bat
+ 
+      - nom: Connexion à LiteManager
+        parcours: cmd /c show.bat
+ 
+      - nom : Compteur de temps
+        parcours: cmd /c loop.bat
